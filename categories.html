@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories - Modern E-commerce Store</title>
+    <!-- Tailwind CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm w-full z-50">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center gap-8 border border-[#e8e8e8] rounded-2xl p-3 relative mx-auto w-full max-w-6xl">
+                <!-- Logo -->
+                <div class="logo flex items-center justify-start gap-2">
+                    <img src="/mnt/data/sdsdv.png" alt="Logo" class="w-10 h-10">
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex gap-8 justify-center">
+                    <a href="index.html" class="text-[#606060] hover:text-black text-base transition-all transform hover:scale-105">Home</a>
+                    <a href="shop.html" class="text-[#606060] hover:text-black text-base transition-all transform hover:scale-105">Shop</a>
+                    <a href="categories.html" class="text-[#606060] hover:text-black text-base transition-all transform hover:scale-105">Categories</a>
+                    <a href="about.html" class="text-[#606060] hover:text-black text-base transition-all transform hover:scale-105">About</a>
+                </div>
+                
+                <!-- Action Button -->
+                <div class="hidden md:flex items-center">
+                    <button class="flex items-center justify-center gap-2 bg-black text-white h-10 px-6 rounded-lg border border-transparent hover:bg-white hover:text-black hover:border-[#dedede] transition-all transform hover:scale-105 text-base">
+                        <i class="fas fa-shopping-cart text-lg"></i>
+                        Cart
+                    </button>
+                </div>
+                
+                <!-- Mobile Menu Toggle -->
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-gray-700 focus:outline-none">
+                        <i class="fas fa-bars fa-lg"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md mt-4">
+            <a href="index.html" class="block px-4 py-2 text-[#606060] hover:text-black">Home</a>
+            <a href="shop.html" class="block px-4 py-2 text-[#606060] hover:text-black">Shop</a>
+            <a href="categories.html" class="block px-4 py-2 text-[#606060] hover:text-black">Categories</a>
+            <a href="about.html" class="block px-4 py-2 text-[#606060] hover:text-black">About</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-20">
+        <!-- Categories Section -->
+        <section class="container mx-auto px-4 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Electronics Category -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="relative">
+                        <img src="/api/placeholder/800/400" alt="Electronics" class="w-full h-64 object-cover" loading="lazy">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                            <h2 class="text-white text-3xl font-bold">Electronics</h2>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="grid grid-cols-2 gap-4">
+                            <a href="/categories/electronics/smartphones" class="flex items-center justify-between px-4 py-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors duration-200 group">
+                                <span class="font-medium group-hover:text-blue-600">Smartphones</span>
+                                <i class="fas fa-mobile-alt text-gray-400 group-hover:text-blue-600"></i>
+                            </a>
+                            <a href="/categories/electronics/laptops" class="flex items-center justify-between px-4 py-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors duration-200 group">
+                                <span class="font-medium group-hover:text-blue-600">Laptops</span>
+                                <i class="fas fa-laptop text-gray-400 group-hover:text-blue-600"></i>
+                            </a>
+                            <a href="/categories/electronics/tablets" class="flex items-center justify-between px-4 py-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors duration-200 group">
+                                <span class="font-medium group-hover:text-blue-600">Tablets</span>
+                                <i class="fas fa-tablet-alt text-gray-400 group-hover:text-blue-600"></i>
+                            </a>
+                            <a href="/categories/electronics/accessories" class="flex items-center justify-between px-4 py-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors duration-200 group">
+                                <span class="font-medium group-hover:text-blue-600">Accessories</span>
+                                <i class="fas fa-headphones text-gray-400 group-hover:text-blue-600"></i>
+                            </a>
+                            <a href="/categories/electronics/gaming" class="flex items-center justify-between px-4 py-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors duration-200 group">
+                                <span class="font-medium group-hover:text-blue-600">Gaming</span>
+                                <i class="fas fa-gamepad text-gray-400 group-hover:text-blue-600"></i>
+                            </a>
+                            <a href="/categories/electronics/cameras" class="flex items-center justify-between px-4 py-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors duration-200 group">
+                                <span class="font-medium group-hover:text-blue-600">Cameras</span>
+                                <i class="fas fa-camera text-gray-400 group-hover:text-blue-600"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fashion Category -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="relative">
+                        <img src="/api/placeholder/800/400" alt="Fashion" class="w-full h-64 object-cover" loading="lazy">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                            <h2 class="text-white text-3xl font-bold">Fashion</h2>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="grid grid-cols-2 gap-4">
+                            <a href="/categories/fashion/mens-wear" class="flex items-center justify-between px-4 py-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors duration-200 group">
+                                <span class="font-medium group-hover:text-blue-600">Men's Wear</span>
+                                <i class="fas fa-tshirt text-gray-400 group-hover:text-blue-600"></i>
+                            </a>
+                            <a href="/categories/fashion/womens-wear" class="flex items-center justify-between px-4 py-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors duration-200 group">
+                                <span class="font-medium group-hover:text-blue-600">Women's Wear</span>
+                                <i class="fas fa-female text-gray-400 group-hover:text-blue-600"></i>
+                            </a>
+                            <a href="/categories/fashion/kids" class="flex items-center justify-between px-4 py-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors duration-200 group">
+                                <span class="font-medium group-hover:text-blue-600">Kids</span>
+                                <i class="fas fa-child text-gray-400 group-hover:text-blue-600"></i>
+                            </a>
+                            <a href="/categories/fashion/shoes" class="flex items-center justify-between px-4 py-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors duration-200 group">
+                                <span class="font-medium group-hover:text-blue-600">Shoes</span>
+                                <i class="fas fa-shoe-prints text-gray-400 group-hover:text-blue-600"></i>
+                            </a>
+                            <a href="/categories/fashion/accessories" class="flex items-center justify-between px-4 py-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors duration-200 group">
+                                <span class="font-medium group-hover:text-blue-600">Accessories</span>
+                                <i class="fas fa-glasses text-gray-400 group-hover:text-blue-600"></i>
+                            </a>
+                            <a href="/categories/fashion/jewelry" class="flex items-center justify-between px-4 py-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors duration-200 group">
+                                <span class="font-medium group-hover:text-blue-600">Jewelry</span>
+                                <i class="fas fa-gem text-gray-400 group-hover:text-blue-600"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Home & Living Category -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="relative">
+                        <img src="/api/placeholder/800/400" alt="Home & Living" class="w-full h-64 object-cover" loading="lazy">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                            <h2 class="text-white text-3xl font-bold">Home & Living</h2>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="grid grid-cols-2 gap-4">
+                            <a href="/categories/home-living/furniture" class="flex items-center justify-between px-4 py-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors duration-200 group">
+                                <span class="font-medium group-hover:text-blue-600">Furniture</span>
+                                <i class="fas fa-couch text-gray-400 group-hover:text-blue-600"></i>
+                            </a>
+                            <a href="/categories/home-living/decor" class="flex items-center justify-between px-4 py-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors duration-200 group">
+                                <span class="font-medium group-hover:text-blue-600">Decor</span>
+                                <i class="fas fa-home text-gray-400 group-hover:text-blue-600"></i>
+                            </a>
+                            <a href="/categories/home-living/kitchenware" class="flex items-center justify-between px-4 py-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors duration-200 group">
+                                <span class="font-medium group-hover:text-blue-600">Kitchenware</span>
+                                <i class="fas fa-utensils text-gray-400 group-hover:text-blue-600"></i>
+                            </a>
+                            <a href="/categories/home-living/bedding" class="flex items-center justify-between px-4 py-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors duration-200 group">
+                                <span class="font-medium group-hover:text-blue-600">Bedding</span>
+                                <i class="fas fa-bed text-gray-400 group-hover:text-blue-600"></i>
+                            </a>
+                            <a href="/categories/home-living/lighting" class="flex items-center justify-between px-4 py-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors duration-200 group">
+                                <span class="font-medium group-hover:text-blue-600">Lighting</span>
+                                <i class="fas fa-lightbulb text-gray-400 group-hover:text-blue-600"></i>
+                            </a>
+                            <a href="/categories/home-living/storage" class="flex items-center justify-between px-4 py-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors duration-200 group">
+                                <span class="font-medium group-hover:text-blue-600">Storage</span>
+                                <i class="fas fa-box text-gray-400 group-hover:text-blue-600"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Beauty Category -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="relative">
+                        <img src="/api/placeholder/800/400" alt="Beauty" class="w-full h-64 object-cover" loading="lazy">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                            <h2 class="text-white text-3xl font-bold">Beauty</h2>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="grid grid-cols-2 gap-4">
+                            <a href="/categories/beauty/skincare" class="flex items-center justify-between px-4 py-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors duration-200 group">
+                                <span class="font-medium group-hover:text-blue-600">Skincare</span>
+                                <i class="fas fa-spa text-gray-400 group-hover:text-blue-600"></i>
+                            </a>
+                            <a href="/categories/beauty/makeup" class="flex items-center justify-between px-4 py-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors duration-200 group">
+                                <span class="font-medium group-hover:text-blue-600">Makeup</span>
+                                <i class="fas fa-paint-brush text-gray-400 group-hover:text-blue-600"></i>
+                            </a>
+                            <a href="/categories/beauty/haircare" class="flex items-center justify-between px-4 py-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors duration-200 group">
+                                <span class="font-medium group-hover:text-blue-600">Haircare</span>
+                                <i class="fas fa-cut text-gray-400 group-hover:text-blue-600"></i>
+                            </a>
+                            <a href="/categories/beauty/fragrances" class="flex items-center justify-between px-4 py-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors duration-200 group">
+                                <span class="font-medium group-hover:text-blue-600">Fragrances</span>
+                                <i class="fas fa-spray-can text-gray-400 group-hover:text-blue-600"></i>
+                            </a>
+                            <!-- Completed Tools Subcategory with Icon -->
+                            <a href="/categories/beauty/tools" class="flex items-center justify-between px-4 py-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors duration-200 group">
+                                <span class="font-medium group-hover:text-blue-600">Tools</span>
+                                <i class="fas fa-tools text-gray-400 group-hover:text-blue-600"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Subscription Section -->
+        <section class="bg-gray-100 py-16">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl font-bold mb-4">Subscribe to Our Newsletter</h2>
+                <p class="mb-8">Get updates about new products and special offers</p>
+                <form id="newsletter-form" class="max-w-md mx-auto flex flex-col items-center">
+                    <div class="flex w-full">
+                        <input type="email" id="newsletter-email" placeholder="Enter your email" class="flex-1 px-4 py-3 rounded-l-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600" aria-label="Email Address" required>
+                        <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded-r-lg hover:bg-blue-700 transition">Subscribe</button>
+                    </div>
+                    <!-- Confirmation Message -->
+                    <p id="newsletter-feedback" class="mt-4 text-green-600 hidden">Thank you for subscribing!</p>
+                    <!-- Error Message -->
+                    <p id="newsletter-error" class="mt-4 text-red-600 hidden">Please enter a valid email address.</p>
+                    <!-- Optional: Social Proof or Additional Content -->
+                    <div class="mt-8">
+                        <p class="text-gray-600">Join over <span class="font-semibold">50,000+</span> happy subscribers!</p>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (Consistent across pages) -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- About Us -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">About Us</h3>
+                    <p class="text-gray-400">Your trusted online shopping destination for quality products.</p>
+                </div>
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html" class="hover:text-white">Home</a></li>
+                        <li><a href="shop.html" class="hover:text-white">Shop</a></li>
+                        <li><a href="categories.html" class="hover:text-white">Categories</a></li>
+                        <li><a href="about.html" class="hover:text-white">About</a></li>
+                    </ul>
+                </div>
+                <!-- Customer Service -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Customer Service</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">Shipping Policy</a></li>
+                        <li><a href="#" class="hover:text-white">Returns & Exchanges</a></li>
+                        <li><a href="#" class="hover:text-white">FAQ</a></li>
+                    </ul>
+                </div>
+                <!-- Connect With Us -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Connect With Us</h3>
+                    <div class="flex space-x-4 text-gray-400">
+                        <a href="#" class="hover:text-white" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="hover:text-white" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="hover:text-white" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="hover:text-white" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Bottom -->
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Your Store Name. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Enhancements -->
+    <script>
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (menuToggle && mobileMenu) {
+            menuToggle.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        // Newsletter Form Validation and Feedback
+        const newsletterForm = document.getElementById('newsletter-form');
+        const newsletterEmail = document.getElementById('newsletter-email');
+        const newsletterFeedback = document.getElementById('newsletter-feedback');
+        const newsletterError = document.getElementById('newsletter-error');
+
+        if (newsletterForm) {
+            newsletterForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const emailValue = newsletterEmail.value.trim();
+
+                if (validateEmail(emailValue)) {
+                    // Simulate form submission (e.g., send data to server)
+                    newsletterFeedback.classList.remove('hidden');
+                    newsletterError.classList.add('hidden');
+                    newsletterForm.reset();
+                } else {
+                    newsletterError.classList.remove('hidden');
+                    newsletterFeedback.classList.add('hidden');
+                }
+
+                // Optionally hide messages after a delay
+                setTimeout(() => {
+                    newsletterFeedback.classList.add('hidden');
+                    newsletterError.classList.add('hidden');
+                }, 5000);
+            });
+        }
+
+        function validateEmail(email) {
+            const regex = /^\S+@\S+\.\S+$/;
+            return regex.test(email);
+        }
+
+        // Add to Cart Functionality
+        document.addEventListener('click', function(e) {
+            if (e.target && e.target.closest('.add-to-cart')) {
+                e.preventDefault();
+                const button = e.target.closest('.add-to-cart');
+                // Simulate adding to cart
+                let cartCount = document.getElementById('cart-count');
+                let currentCount = parseInt(cartCount.textContent) || 0;
+                cartCount.textContent = currentCount + 1;
+                // Provide user feedback
+                alert('Item added to cart!');
+            }
+        });
+
+        // Optional: Enhance Add to Cart buttons with class 'add-to-cart'
+        // Update your HTML buttons to include this class for the functionality to work
+    </script>
+</body>
+</html>

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern E-commerce Store</title>
+    <!-- Tailwind CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Swiper CSS for Carousel -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm w-full z-50">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center gap-8 border border-[#e8e8e8] rounded-2xl p-3 relative mx-auto w-full max-w-6xl">
+                <!-- Logo -->
+                <div class="logo flex items-center justify-start gap-2">
+                    <img src="/mnt/data/sdsdv.png" alt="Logo" class="w-10 h-10">
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex gap-8 justify-center">
+                    <a href="index.html" class="text-[#606060] hover:text-black text-base transition-all transform hover:scale-105">Home</a>
+                    <a href="shop.html" class="text-[#606060] hover:text-black text-base transition-all transform hover:scale-105">Shop</a>
+                    <a href="categories.html" class="text-[#606060] hover:text-black text-base transition-all transform hover:scale-105">Categories</a>
+                    <a href="about.html" class="text-[#606060] hover:text-black text-base transition-all transform hover:scale-105">About</a>
+                </div>
+                
+                <!-- Action Button -->
+                <div class="hidden md:flex items-center">
+                    <button class="flex items-center justify-center gap-2 bg-black text-white h-10 px-6 rounded-lg border border-transparent hover:bg-white hover:text-black hover:border-[#dedede] transition-all transform hover:scale-105 text-base">
+                        <i class="fas fa-shopping-cart text-lg"></i>
+                        Cart
+                    </button>
+                </div>
+                
+                <!-- Mobile Menu Toggle -->
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-gray-700 focus:outline-none">
+                        <i class="fas fa-bars fa-lg"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden bg-white shadow-md">
+            <a href="index.html" class="block px-4 py-2 text-blue-600">Home</a>
+            <a href="shop.html" class="block px-4 py-2 hover:text-blue-600">Shop</a>
+            <a href="categories.html" class="block px-4 py-2 hover:text-blue-600">Categories</a>
+            <a href="about.html" class="block px-4 py-2 hover:text-blue-600">About</a>
+        </div>
+    </header>
+
+    <!-- Hero Section with Carousel -->
+    <section class="mt-16">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide">
+                    <div class="relative h-96">
+                        <img src="assets/images/hero1.jpg" alt="Season Sale" class="w-full h-full object-cover" loading="lazy">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-white">
+                            <h1 class="text-4xl md:text-6xl font-bold mb-6">Season Sale</h1>
+                            <p class="text-xl mb-8">Up to 70% off on selected items</p>
+                            <a href="shop.html" class="bg-white text-gray-900 px-8 py-3 rounded-full hover:bg-gray-100 transition">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="swiper-slide">
+                    <div class="relative h-96">
+                        <img src="assets/images/hero2.jpg" alt="New Arrivals" class="w-full h-full object-cover" loading="lazy">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-white">
+                            <h1 class="text-4xl md:text-6xl font-bold mb-6">New Arrivals</h1>
+                            <p class="text-xl mb-8">Check out the latest trends</p>
+                            <a href="shop.html" class="bg-white text-gray-900 px-8 py-3 rounded-full hover:bg-gray-100 transition">Discover</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="swiper-slide">
+                    <div class="relative h-96">
+                        <img src="assets/images/hero3.jpg" alt="Best Sellers" class="w-full h-full object-cover" loading="lazy">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-white">
+                            <h1 class="text-4xl md:text-6xl font-bold mb-6">Best Sellers</h1>
+                            <p class="text-xl mb-8">Popular products this month</p>
+                            <a href="shop.html" class="bg-white text-gray-900 px-8 py-3 rounded-full hover:bg-gray-100 transition">Browse</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Navigation Buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </section>
+
+    <!-- Featured Categories -->
+    <section class="container mx-auto px-4 py-16">
+        <h2 class="text-3xl font-bold mb-8">Shop by Category</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <!-- Category Cards -->
+            <a href="categories.html#electronics" class="relative rounded-lg overflow-hidden group cursor-pointer">
+                <img src="assets/images/category1.jpg" alt="Electronics" class="w-full h-64 object-cover" loading="lazy">
+                <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                    <span class="text-white text-xl font-bold">Electronics</span>
+                </div>
+            </a>
+            <a href="categories.html#fashion" class="relative rounded-lg overflow-hidden group cursor-pointer">
+                <img src="assets/images/category2.jpg" alt="Fashion" class="w-full h-64 object-cover" loading="lazy">
+                <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                    <span class="text-white text-xl font-bold">Fashion</span>
+                </div>
+            </a>
+            <a href="categories.html#home-living" class="relative rounded-lg overflow-hidden group cursor-pointer">
+                <img src="assets/images/category3.jpg" alt="Home & Living" class="w-full h-64 object-cover" loading="lazy">
+                <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                    <span class="text-white text-xl font-bold">Home & Living</span>
+                </div>
+            </a>
+            <a href="categories.html#beauty" class="relative rounded-lg overflow-hidden group cursor-pointer">
+                <img src="assets/images/category4.jpg" alt="Beauty" class="w-full h-64 object-cover" loading="lazy">
+                <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                    <span class="text-white text-xl font-bold">Beauty</span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="container mx-auto px-4 py-16">
+        <h2 class="text-3xl font-bold mb-8">Featured Products</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="product-list">
+            <!-- Product Cards will be dynamically inserted here -->
+        </div>
+        <!-- Load More Button -->
+        <div class="text-center mt-8">
+            <button id="load-more" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">Load More</button>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="bg-gray-100 py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4">Subscribe to Our Newsletter</h2>
+            <p class="mb-8">Get updates about new products and special offers</p>
+            <form id="newsletter-form" class="max-w-md mx-auto flex flex-col items-center">
+                <div class="flex w-full">
+                    <input type="email" id="newsletter-email" placeholder="Enter your email" class="flex-1 px-4 py-3 rounded-l-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600" aria-label="Email Address" required>
+                    <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded-r-lg hover:bg-blue-700 transition">Subscribe</button>
+                </div>
+                <!-- Confirmation Message -->
+                <p id="newsletter-feedback" class="mt-4 text-green-600 hidden">Thank you for subscribing!</p>
+                <!-- Error Message -->
+                <p id="newsletter-error" class="mt-4 text-red-600 hidden">Please enter a valid email address.</p>
+                <!-- Optional: Social Proof or Additional Content -->
+                <div class="mt-8">
+                    <p class="text-gray-600">Join over <span class="font-semibold">50,000+</span> happy subscribers!</p>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- About Us -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">About Us</h3>
+                    <p class="text-gray-400">Your trusted online shopping destination for quality products.</p>
+                </div>
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html" class="hover:text-white">Home</a></li>
+                        <li><a href="shop.html" class="hover:text-white">Shop</a></li>
+                        <li><a href="categories.html" class="hover:text-white">Categories</a></li>
+                        <li><a href="about.html" class="hover:text-white">About</a></li>
+                    </ul>
+                </div>
+                <!-- Customer Service -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Customer Service</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="shipping.html" class="hover:text-white">Shipping Policy</a></li>
+                        <li><a href="returns.html" class="hover:text-white">Returns & Exchanges</a></li>
+                        <li><a href="faq.html" class="hover:text-white">FAQ</a></li>
+                    </ul>
+                </div>
+                <!-- Connect With Us -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Connect With Us</h3>
+                    <div class="flex space-x-4 text-gray-400">
+                        <a href="https://facebook.com" class="hover:text-white" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://twitter.com" class="hover:text-white" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com" class="hover:text-white" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://pinterest.com" class="hover:text-white" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Bottom -->
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Your Store Name. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <!-- Swiper JS for Carousel -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- JavaScript Code -->
+    <script>
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (menuToggle && mobileMenu) {
+            menuToggle.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        // Initialize Swiper Carousel
+        const swiper = new Swiper('.swiper-container', {
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+        });
+
+        // Dynamic Product Listing with Load More Functionality
+        let products = [
+            // Array of product objects
+            {
+                image: 'assets/images/product1.jpg',
+                name: 'Product Name 1',
+                price: 99.99
+            },
+            {
+                image: 'assets/images/product2.jpg',
+                name: 'Product Name 2',
+                price: 79.99
+            },
+            {
+                image: 'assets/images/product3.jpg',
+                name: 'Product Name 3',
+                price: 149.99
+            },
+            {
+                image: 'assets/images/product4.jpg',
+                name: 'Product Name 4',
+                price: 129.99
+            },
+            {
+                image: 'assets/images/product5.jpg',
+                name: 'Product Name 5',
+                price: 59.99
+            },
+            {
+                image: 'assets/images/product6.jpg',
+                name: 'Product Name 6',
+                price: 89.99
+            },
+            {
+                image: 'assets/images/product7.jpg',
+                name: 'Product Name 7',
+                price: 119.99
+            },
+            {
+                image: 'assets/images/product8.jpg',
+                name: 'Product Name 8',
+                price: 69.99
+            },
+            // Add more products as needed
+        ];
+
+        let productsPerPage = 4;
+        let currentPage = 1;
+
+        function displayProducts() {
+            const productContainer = document.getElementById('product-list');
+            const start = (currentPage - 1) * productsPerPage;
+            const end = currentPage * productsPerPage;
+            const currentProducts = products.slice(start, end);
+
+            currentProducts.forEach(product => {
+                const productCard = document.createElement('div');
+                productCard.classList.add('bg-white', 'rounded-lg', 'shadow-md', 'overflow-hidden');
+                productCard.innerHTML = `
+                    <img src="${product.image}" alt="${product.name}" class="w-full h-64 object-cover" loading="lazy">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold mb-2">${product.name}</h3>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl font-bold">$${product.price.toFixed(2)}</span>
+                            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                `;
+                productContainer.appendChild(productCard);
+            });
+
+            // Hide Load More button if all products are displayed
+            if (end >= products.length) {
+                document.getElementById('load-more').style.display = 'none';
+            }
+        }
+
+        // Initial display
+        displayProducts();
+
+        // Load More Button Event Listener
+        document.getElementById('load-more').addEventListener('click', () => {
+            currentPage++;
+            displayProducts();
+        });
+
+        // Newsletter Form Validation and Feedback
+        const newsletterForm = document.getElementById('newsletter-form');
+        const newsletterEmail = document.getElementById('newsletter-email');
+        const newsletterFeedback = document.getElementById('newsletter-feedback');
+        const newsletterError = document.getElementById('newsletter-error');
+
+        if (newsletterForm) {
+            newsletterForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const emailValue = newsletterEmail.value.trim();
+
+                if (validateEmail(emailValue)) {
+                    // Simulate form submission (e.g., send data to server)
+                    newsletterFeedback.classList.remove('hidden');
+                    newsletterError.classList.add('hidden');
+                    newsletterForm.reset();
+                } else {
+                    newsletterError.classList.remove('hidden');
+                    newsletterFeedback.classList.add('hidden');
+                }
+
+                // Optionally hide messages after a delay
+                setTimeout(() => {
+                    newsletterFeedback.classList.add('hidden');
+                    newsletterError.classList.add('hidden');
+                }, 5000);
+            });
+        }
+
+        function validateEmail(email) {
+            const regex = /^\S+@\S+\.\S+$/;
+            return regex.test(email);
+        }
+
+        // Add to Cart Functionality
+        document.addEventListener('click', function(e) {
+            if (e.target && e.target.classList.contains('add-to-cart')) {
+                e.preventDefault();
+                // Simulate adding to cart
+                let cartCount = document.getElementById('cart-count');
+                let currentCount = parseInt(cartCount.textContent);
+                cartCount.textContent = currentCount + 1;
+                // Optionally use a toast notification instead of alert
+                alert('Item added to cart!');
+            }
+        });
+    </script>
+</body>
+</html>
